@@ -1,6 +1,7 @@
 package oncall.view;
 
 import camp.nextstep.edu.missionutils.Console;
+import java.util.List;
 import oncall.dto.OnCallDto;
 
 public class InputView {
@@ -16,5 +17,13 @@ public class InputView {
         String input = Console.readLine();
         inputValidator.validateOnCall(input);
         return inputParser.parseOnCall(input);
+    }
+
+    public List<String> readWorkers() {
+        String input = Console.readLine();
+        inputValidator.validateWorkers(input);
+        List<String> workers = inputParser.parseWorkers(input);
+        inputValidator.validateWorkers(workers);
+        return workers;
     }
 }

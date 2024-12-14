@@ -2,6 +2,8 @@ package oncall.view;
 
 import java.time.DateTimeException;
 import java.time.Month;
+import java.util.Arrays;
+import java.util.List;
 import oncall.dto.OnCallDto;
 import oncall.enums.DayOfWeeks;
 import oncall.enums.ErrorMessage;
@@ -39,5 +41,10 @@ public class InputParser {
         } catch (final NumberFormatException e) {
             throw new IllegalArgumentException(ErrorMessage.INVALID_INPUT.getMessage());
         }
+    }
+
+    public List<String> parseWorkers(final String workersText) {
+        return Arrays.asList(workersText.split(ON_CALL_DELIMITER));
+
     }
 }
