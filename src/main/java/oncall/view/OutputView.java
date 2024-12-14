@@ -7,6 +7,10 @@ public class OutputView {
         print(OutputMessage.INPUT_MONTH_AND_DAY_OF_WEEK_INTRODUCE);
     }
 
+    public void printWeekDayWorkersIntroduce() {
+        print(OutputMessage.INPUT_WEEKDAY_WORKERS_INTRODUCE);
+    }
+
     public void printLineBreak() {
         System.out.print(System.lineSeparator());
     }
