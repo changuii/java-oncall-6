@@ -11,6 +11,10 @@ public class OutputView {
         print(OutputMessage.INPUT_WEEKDAY_WORKERS_INTRODUCE);
     }
 
+    public void printHolidayWorkersIntroduce() {
+        print(OutputMessage.INPUT_HOLIDAY_WORKERS_INTRODUCE);
+    }
+
     public void printLineBreak() {
         System.out.print(System.lineSeparator());
     }
