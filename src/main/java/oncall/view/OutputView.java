@@ -19,6 +19,10 @@ public class OutputView {
         System.out.print(System.lineSeparator());
     }
 
+    public void printErrorMessage(final IllegalArgumentException customException) {
+        print(customException.getMessage());
+    }
+
     private void print(final Object message, final Object... values) {
         System.out.print(formatMessage(message.toString(), values));
     }
